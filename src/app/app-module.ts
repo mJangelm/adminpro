@@ -12,6 +12,7 @@ import { Nopagefound } from './pages/nopagefound/nopagefound';
 import { PagesModule } from './pages/pages-module';
 import { AuthModule } from './auth-module';
 
+
 @NgModule({
   declarations: [
     App,
@@ -21,10 +22,11 @@ import { AuthModule } from './auth-module';
     BrowserModule,
     AppRoutingModule,
     PagesModule,
-    AuthModule
+    AuthModule,
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    
   ],
   bootstrap: [App]
 })

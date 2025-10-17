@@ -9,6 +9,8 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from '../app-routing-module';
 import { FormsModule } from '@angular/forms';
 import { ComponentsModule } from '../components/components-module';
+import { AppModule } from '../app-module';
+import { NgChartsModule } from 'ng2-charts';
 
 
 
@@ -30,7 +32,9 @@ import { ComponentsModule } from '../components/components-module';
     CommonModule,
     SharedModule,
     AppRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    NgChartsModule
+
   ]
 })
 export class PagesModule { }
