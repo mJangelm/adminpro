@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { ChartType, ChartEvent } from 'chart.js';
-import { ChartData, ActiveElement } from 'chart.js';
+import { ChartType, ChartData, ChartEvent, ActiveElement } from 'chart.js';
 
 @Component({
   selector: 'app-grafica1',
@@ -10,7 +9,6 @@ import { ChartData, ActiveElement } from 'chart.js';
 })
 export class Grafica1 {
 
-  // 🍩 Configuración del gráfico Doughnut
   public doughnutChartLabels: string[] = [
     'Download Sales',
     'In-Store Sales',
@@ -20,33 +18,22 @@ export class Grafica1 {
   public doughnutChartData: ChartData<'doughnut'> = {
     labels: this.doughnutChartLabels,
     datasets: [
-      { data: [350, 450, 100] },
-      { data: [50, 150, 120] },
-      { data: [250, 130, 70] },
+      {
+        data: [350, 450, 100],
+        backgroundColor: ['#7278beff', '#e80303ff', '#3dbc54ff'], // ✅ colores aquí
+        hoverBackgroundColor: ['#b71c1c', '#a1887f', '#9e9e9e'], // (opcional)
+        borderColor: '#fff', // (opcional)
+      },
     ],
   };
 
   public doughnutChartType: ChartType = 'doughnut';
 
-  // 📊 Eventos
-  public chartClicked({
-    event,
-    active,
-  }: {
-    event: ChartEvent;
-    active: ActiveElement[];
-  }): void {
+  public chartClicked({ event, active }: { event: ChartEvent; active: ActiveElement[] }): void {
     console.log('click', event, active);
   }
 
-  public chartHovered({
-    event,
-    active,
-  }: {
-    event: ChartEvent;
-    active: ActiveElement[];
-  }): void {
+  public chartHovered({ event, active }: { event: ChartEvent; active: ActiveElement[] }): void {
     console.log('hover', event, active);
   }
-
 }
