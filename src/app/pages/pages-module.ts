@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { ComponentsModule } from '../components/components-module';
 import { AppModule } from '../app-module';
 import { NgChartsModule } from 'ng2-charts';
+import { AccountSettings } from './account-settings/account-settings';
 
 
 
@@ -19,13 +20,15 @@ import { NgChartsModule } from 'ng2-charts';
     Dashboard,
     Progress,
     Grafica1,
-    Pages
+    Pages,
+    AccountSettings
   ],
   exports: [
     Dashboard,
     Progress,
     Grafica1,
-    Pages
+    Pages,
+    AccountSettings
   ],
   imports: [
     FormsModule,

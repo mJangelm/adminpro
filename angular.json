@@ -26,8 +26,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/assets/css/style.css",
-              "src/assets/css/colors/default-dark.css"
+              "src/assets/css/style.css"
             ],
             "scripts": [
   "node_modules/jquery/dist/jquery.min.js",
@@ -36,9 +35,7 @@
               "src/assets/js/waves.js",
               "src/assets/js/sidebarmenu.js",
               "src/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js",
-              "src/assets/plugins/sparkline/jquery.sparkline.min.js",
-              "src/assets/js/custom.min.js",
-              "src/assets/plugins/styleswitcher/jQuery.style.switcher.js"
+              "src/assets/plugins/sparkline/jquery.sparkline.min.js"
             ]
           },
           "configurations": {
