@@ -4,6 +4,7 @@ import { Login } from './login/login';
 import { Register } from './register/register';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from './shared/shared-module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -14,7 +15,8 @@ import { SharedModule } from './shared/shared-module';
   imports: [
     CommonModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class AuthModule { }
