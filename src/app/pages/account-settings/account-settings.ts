@@ -1,26 +1,35 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Settings } from '../../services/settings';
 
 @Component({
   selector: 'app-account-settings',
   standalone: false,
   templateUrl: './account-settings.html',
-  styleUrls: ['./account-settings.css'] 
+  styleUrls: ['./account-settings.css']
 })
-export class AccountSettings implements AfterViewInit {
+export class AccountSettings implements OnInit, AfterViewInit {
 
-  ngAfterViewInit() {
-    const saved = localStorage.getItem('theme') || 'blue-dark';
-    const elemento = document.querySelector('#theme') as HTMLLinkElement;
-    if (elemento) {
-      elemento.href = `assets/css/colors/${saved}.css`;
-    }
+
+
+  constructor(private SettingService: Settings) {
+
   }
 
-  changeTheme(value: string) {
-    const elemento = document.querySelector('#theme') as HTMLLinkElement;
-    if (elemento) {
-      elemento.href = `assets/css/colors/${value}.css`;
-      localStorage.setItem('theme', value);
-    }
+  ngOnInit(): void {
+    // Aquí puedes cargar configuraciones, pero no acceder al DOM aún.
   }
+
+  ngAfterViewInit(): void {
+    this.SettingService.checkCurrenTheme();
+
+  }
+
+  changeTheme(value: string): void {
+
+    this.SettingService.changeTheme(value);
+
+    
+  }
+
+
 }
