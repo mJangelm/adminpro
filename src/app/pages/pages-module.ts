@@ -12,6 +12,9 @@ import { ComponentsModule } from '../components/components-module';
 import { AppModule } from '../app-module';
 import { NgChartsModule } from 'ng2-charts';
 import { AccountSettings } from './account-settings/account-settings';
+import { Promesas } from './promesas/promesas';
+import {  HttpClientModule } from '@angular/common/http';
+import { Rxjs } from './rxjs/rxjs';
 
 
 
@@ -21,14 +24,17 @@ import { AccountSettings } from './account-settings/account-settings';
     Progress,
     Grafica1,
     Pages,
-    AccountSettings
+    AccountSettings,
+    Promesas,
+    Rxjs
   ],
   exports: [
     Dashboard,
     Progress,
     Grafica1,
     Pages,
-    AccountSettings
+    AccountSettings,
+    Rxjs
   ],
   imports: [
     FormsModule,
@@ -36,7 +42,7 @@ import { AccountSettings } from './account-settings/account-settings';
     SharedModule,
     AppRoutingModule,
     ComponentsModule,
-    NgChartsModule
+    NgChartsModule,
 
   ]
 })

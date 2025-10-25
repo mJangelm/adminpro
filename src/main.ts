@@ -1,7 +1,6 @@
-import { platformBrowser } from '@angular/platform-browser';
-import { AppModule } from './app/app-module';
+import { platformBrowser } from '@angular/platform-browser'; 
+import { AppModule } from './app/app-module'; //de que el archivo se llame app.module.ts
 
-platformBrowser().bootstrapModule(AppModule, {
-  ngZoneEventCoalescing: true,
-})
+platformBrowser()
+  .bootstrapModule(AppModule)
   .catch(err => console.error(err));

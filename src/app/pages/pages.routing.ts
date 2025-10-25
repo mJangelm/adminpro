@@ -5,6 +5,8 @@ import { Dashboard } from './dashboard/dashboard';
 import { Progress } from './progress/progress';
 import { Grafica1 } from './grafica1/grafica1';
 import { AccountSettings } from './account-settings/account-settings';
+import { Promesas } from './promesas/promesas';
+import { Rxjs } from './rxjs/rxjs';
 
 const routes: Routes = [
     {path: 'dashboard', component: Pages,
@@ -15,6 +17,8 @@ const routes: Routes = [
       {path: 'progress', component: Progress},
       {path: 'grafica1', component: Grafica1},
       {path: 'account-settings', component: AccountSettings},
+      {path: 'promesas', component: Promesas},
+      {path: 'rxjs', component: Rxjs},
       ]
   },
 ];
