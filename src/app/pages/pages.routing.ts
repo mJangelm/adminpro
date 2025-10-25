@@ -13,12 +13,12 @@ const routes: Routes = [
   
     children: [
   
-      {path: '', component: Dashboard},
-      {path: 'progress', component: Progress},
-      {path: 'grafica1', component: Grafica1},
-      {path: 'account-settings', component: AccountSettings},
-      {path: 'promesas', component: Promesas},
-      {path: 'rxjs', component: Rxjs},
+      {path: '', component: Dashboard, data: {titulo: 'Dashboard'}},
+      {path: 'progress', component: Progress, data: {titulo: 'progress'}},
+      {path: 'grafica1', component: Grafica1, data: {titulo: 'grafica1'}},
+      {path: 'account-settings', component: AccountSettings, data: {titulo: 'settings'}},
+      {path: 'promesas', component: Promesas, data: {titulo: 'promesas'}},
+      {path: 'rxjs', component: Rxjs, data: {titulo: 'rxjs'}},
       ]
   },
 ];
